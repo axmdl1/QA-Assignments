@@ -1,0 +1,6 @@
+2026-01-04 23:10:46 INFO  assignment5.tests.BuyBookTest - Starting browser
+2026-01-04 23:10:52 INFO  assignment5.tests.BuyBookTest - Opening main page
+2026-01-04 23:10:59 INFO  assignment5.tests.BuyBookTest - Waiting for 5 seconds
+2026-01-04 23:10:59 INFO  assignment5.tests.BuyBookTest - Choosing our book in catalog page
+2026-01-04 23:11:01 INFO  assignment5.tests.BuyBookTest - Clicking add to cart button and going to cart page
+2026-01-04 23:11:03 INFO  assignment5.tests.BuyBookTest - Closing browser

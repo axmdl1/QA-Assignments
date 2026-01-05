@@ -1,6 +1,5 @@
 package assignment5.pages;
 
-import assignment5.config.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -22,6 +21,4 @@ public class MainPage {
         driver.findElement(searchField).sendKeys(bookName);
         driver.findElement(clickSearch).click();
     }
-
-
 }

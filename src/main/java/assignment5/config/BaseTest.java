@@ -23,17 +23,6 @@ public abstract class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-//    protected void waitForEnterAndClose() {
-//        log.info("Press ENTER to close the browser...");
-//        new Scanner(System.in).nextLine();
-//
-//        if (driver != null) {
-//            log.info("Closing browser after ENTER");
-//            driver.quit();
-//            driver = null;
-//        }
-//    }
-
     @AfterMethod
     public void tearDown() {
         if (driver != null){

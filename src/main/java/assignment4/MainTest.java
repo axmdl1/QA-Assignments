@@ -38,7 +38,7 @@ public class MainTest {
         mainPage.clickSearchBtn();
 
         //waiting for loading next page (TicketBookPage) after main page
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/main/div/div/div[2]/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[1]/div[2]/button")));
 
         //init TicketBookPage
@@ -46,14 +46,13 @@ public class MainTest {
         ticketBookPage.clickBookBtn();
 
         //waiting while next page loads (PassengerDetails)
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/main/div/div[2]/section/div[4]/div/div[1]/div[2]/div/button[1]")));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".t-passenger-gender > button:nth-child(1)")));
 
         //init PassengerDetails and filling in data.
         PassengerDetailsPage enterDetailsPage = new PassengerDetailsPage(driver);
         enterDetailsPage.fillInDetails("James", "Kosinskiye");
 
         //waiting for next page
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app-avia\"]/div/div[2]/section/div/div[2]/div/div/div[2]/label[3]/div[3]/div[2]")));
 
         //init SeatSelectionPage and selecting random seat.
         SeatSelectionPage seatSelectionPage = new SeatSelectionPage(driver);

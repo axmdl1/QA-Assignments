@@ -6,7 +6,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class TicketBookPage extends BasePage {
 
-    private By bookBtn = By.cssSelector("div.t-leazy:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > button:nth-child(2) > span:nth-child(1)");
+//    private By bookBtn = By.xpath(
+//            "//div[contains(@class,'avia-item')]" +
+//                    "[.//span[contains(normalize-space(),'10 KG')]]" +
+//                    "//div[contains(@class,'avia-flexible-tickets-results')]" +
+//                    "//button[.//span[normalize-space()='Book']]"
+//    );
+
+    private By bookBtn = By.xpath("//div[contains(@class,'avia-item')]" +
+            "[.//div[contains(text(),'SCAT JSC Aircompany')]]" +
+            "//div[.//div[normalize-space()='Standard Ticket']]" +
+            "//button[.//span[normalize-space()='Book']]");
 
     public TicketBookPage(WebDriver driver) {
         super(driver);

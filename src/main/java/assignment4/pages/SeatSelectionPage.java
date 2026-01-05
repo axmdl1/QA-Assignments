@@ -6,15 +6,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SeatSelectionPage extends BasePage {
 
-    private By randomSeat = By.xpath("//*[@id=\"app-avia\"]/div/div[2]/section/div/div[2]/div/div/div[2]/label[3]/div[3]/div[2]");
-    private By confirmBtn = By.xpath("/html/body/main/div/div[2]/section/div/div[3]/div/button");
+    private By randomSeat = By.xpath("//button[contains(@class,'preset-2') and .//text()[contains(.,'Continue without selecting seats')]]");
+    //private By confirmBtn = By.xpath("/html/body/main/div/div[2]/section/div/div[3]/div/button");
 
     public SeatSelectionPage(WebDriver driver) {
         super(driver);
     }
 
     public void selectRandomSeat() {
-        driver.findElement(randomSeat).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(confirmBtn)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(randomSeat)).click();
     }
 }

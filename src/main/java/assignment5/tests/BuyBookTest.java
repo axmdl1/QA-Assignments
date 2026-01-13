@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class BuyBookTest extends BaseTest {
 
-    String bookName = "чистая архитектура";
+    String bookName = "идеальный программист";
 
     @Test
     public void buyCleanArchitectureBook() {

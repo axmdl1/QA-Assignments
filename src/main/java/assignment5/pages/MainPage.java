@@ -7,7 +7,7 @@ public class MainPage {
     private WebDriver driver;
 
     private By searchField = By.id("search");
-    private By clickSearch = By.xpath("/html/body/div[3]/header/div/div/div/div[2]/div[1]/div[1]/div/div[2]/form/div[2]/button[2]");
+    private By clickSearch = By.cssSelector("button.block-search-wrapper__button[type='submit']");
 
     public MainPage(WebDriver driver) {
         this.driver = driver;

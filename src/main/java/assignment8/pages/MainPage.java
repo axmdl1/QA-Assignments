@@ -1,4 +1,4 @@
-package assignment6.pages;
+package assignment8.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

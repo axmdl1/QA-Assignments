@@ -1,4 +1,4 @@
-package assignment6.config;
+package assignment8.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import org.apache.logging.log4j.LogManager;

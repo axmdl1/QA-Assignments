@@ -58,6 +58,6 @@ public class TicketSteps {
 
     @Then("the checkout page should be opened")
     public void the_checkout_page_should_be_opened() {
-        // assert по URL или наличию формы
+
     }
 }

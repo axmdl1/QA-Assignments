@@ -27,7 +27,6 @@ public class LoginInvalidCredentialSteps {
 
     @Then("an error message should be displayed")
     public void an_error_message_should_be_displayed() {
-        // можно оставить пустым
-        // или проверить текст ошибки, если хочешь
+
     }
 }

@@ -17,7 +17,7 @@ public class BuyF1TicketTest extends BaseTest {
         log.info("opening website");
         mainPage.openWebsite();
         log.info("Clicking accept cookies button");
-        mainPage.clickAcceptCookies();
+//        mainPage.clickAcceptCookies();
         log.info("Choosing Azerbaijan GP, Baku circuit");
         mainPage.openBakuTicket();
 

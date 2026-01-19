@@ -28,7 +28,6 @@ public class LoginSteps {
 
         MainPage mainPage = new MainPage(driver);
         mainPage.openWebsite();
-        mainPage.clickAcceptCookies();
         mainPage.openBakuTicket();
 
         BakuTicketSelection baku = new BakuTicketSelection(driver);

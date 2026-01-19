@@ -1,9 +1,6 @@
 package assignment8.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,12 +22,19 @@ public class MainPage {
 
     public void openWebsite() {
         driver.get("https://tickets.formula1.com/en");
-        wait.until(ExpectedConditions.elementToBeClickable(clickAcceptCookie));
+        try {
+            WebElement cookies =
+                    new WebDriverWait(driver, Duration.ofSeconds(5))
+                            .until(ExpectedConditions.elementToBeClickable(clickAcceptCookie));
+            cookies.click();
+        } catch (TimeoutException e) {
+            // cookies баннера нет — это нормально
+        }
     }
 
-    public void clickAcceptCookies() {
-        driver.findElement(clickAcceptCookie).click();
-    }
+//    public void clickAcceptCookies() {
+//        driver.findElement(clickAcceptCookie).click();
+//    }
 
     public void openBakuTicket() {
         WebElement btn = wait.until(
